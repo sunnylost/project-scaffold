@@ -1,0 +1,31 @@
+{
+    "name": "project-scaffold",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "rollup -w -c rollup.config.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^4.3.0",
+        "eslint-friendly-formatter": "^4.0.1",
+        "eslint-plugin-prettier": "^3.1.0",
+        "husky": "^2.4.1",
+        "lint-staged": "^8.1.7",
+        "prettier": "^1.17.1",
+        "rollup": "^1.15.5",
+        "rollup-plugin-babel": "^4.3.2"
+    },
+    "lint-staged": {
+        "*.js": ["eslint --fix --ignore-path .eslintignore", "git add"]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
+}
